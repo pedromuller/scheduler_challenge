@@ -1,0 +1,28 @@
+{
+  "name": "scheduler_challange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src/server.js",
+    "startDev": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedromuller/scheduler_challange.git"
+  },
+  "author": "Pedro Müller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedromuller/scheduler_challange/issues"
+  },
+  "homepage": "https://github.com/pedromuller/scheduler_challange#readme",
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
