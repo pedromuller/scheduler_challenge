@@ -1,4 +1,5 @@
 const createHoursRange = require('./createHoursRange');
+const moment = require('moment');
 
 module.exports = function({workHours, period, existingServices, selectedServices}){
   const workHoursRange = createHoursRange({
@@ -13,13 +14,16 @@ module.exports = function({workHours, period, existingServices, selectedServices
       period,
     })]
   }, []);
-
   const selectedServicesHoursRanges = selectedServices.reduce((acc, selectedService) => {
-    return [...acc, ...createHoursRange({
+    const newHoursRange = createHoursRange({
       start: selectedService.start,
       end: selectedService.end,
       period,
-    })]
+    });
+    const isAnyHourOverlaping = existingServicesHoursRanges.some(el => newHoursRange.includes(el));
+    
+    if(isAnyHourOverlaping) return acc;
+    return [...acc, ...newHoursRange]
   }, []);
   const lockedHours = [...existingServicesHoursRanges, ...selectedServicesHoursRanges];
 
