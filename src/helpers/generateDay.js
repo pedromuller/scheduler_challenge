@@ -11,14 +11,14 @@ module.exports = function({workHours, period, existingServices, selectedServices
     return [...acc, ...createHoursRange({
       start: existingService.start,
       end: existingService.end,
-      period,
+      period:'00:01',
     })]
   }, []);
   const selectedServicesHoursRanges = selectedServices.reduce((acc, selectedService) => {
     const newHoursRange = createHoursRange({
       start: selectedService.start,
       end: selectedService.end,
-      period,
+      period:'00:01',
     });
     const isAnyHourOverlaping = existingServicesHoursRanges.some(el => newHoursRange.includes(el));
     

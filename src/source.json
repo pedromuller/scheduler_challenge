@@ -1,7 +1,7 @@
 {
   "workHours": {
     "start": "09:00",
-    "end": "19:00"
+    "end": "20:00"
   },
   "period": "01:00",
   "existingServices": [
@@ -14,10 +14,6 @@
     {
       "start": "15:00",
       "end": "18:00"
-    },
-    {
-      "start": "09:00",
-      "end": "10:00"
     }
     
   ]
