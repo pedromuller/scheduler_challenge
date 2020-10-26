@@ -1,4 +1,4 @@
-# scheduler challenge
+# Scheduler challenge
 This is a project designed to meet a technical challenge.
 
 The goal of the challenge is to generate a schedule grid according to some rules.
